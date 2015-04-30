@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Tool Demos</title>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="perf.js"></script>
+    <link href="../../bootstrap.css" rel="stylesheet">
+    <link href="../../demo.css" rel="stylesheet">
+	<style>
+		.box {
+			position: absolute;
+			width: 8px;
+			height: 8px;
+		}
+	</style>
+</head>
+<body>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <h1>Performance tool Improvements</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12 hero-unit">                    
+                    <button id="go" class="btn btn-large btn-success">Show Random!</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12">
+                    <p>JavaScript profiler and UI Responsiveness tool integrated into a new tool <strong>profiler</strong>.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6">
+                    <h2>User Measures</h2>
+                    <ul>
+                        <li>Annotate the timeline using the <code>window.performance</code> object.</li>
+                        <li>Filter down the profiler to that scenario</li>
+                    </ul>
+<pre>
+performance.mark("ExampleScenario-Begin");
+doStuff();
+performance.mark("ExampleScenario-End");
+performance.measure("Example Scenario", "ExampleScenario-Begin", "ExampleScenario-End");
+</pre>
+                </div>
+
+                <div class="span6">
+                    <h2>DOM Explorer Integration</h2>
+                    <ul>
+                        <li>Element highlighting</li>
+                        <li>Inspect element from the timeline</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="span12 centerText">
+                    <a class="btn btn-large btn-primary" href="/2015BuildF12Demos.html">Demo Index</a>
+                </div>
+            </div>
+        </div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>

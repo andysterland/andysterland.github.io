@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculation Demo for Profiling</title>
+    <link href="../../bootstrap.css" rel="stylesheet">
+    <link href="../../demo.css" rel="stylesheet">
+    <style>
+    </style>
+    <script src="calc.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <h1>New Profiler - CPU Sampling</h1>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="row">        
+        <div class="span12 resultsBox hero-unit">
+            <h2>Profiling Example</h2>
+            <button id="go" class="btn btn-large btn-success">Go!</button>
+            <div>Time taken: <span id="timeTaken">NA</span> ms</div>
+            <div>Results</div>
+            <ul id="resultList">
+
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6">
+        <h2>CPU Sampling - New</h2>
+            <div>
+                <ul>
+                    <li>The CPU stack is collected at intervals</li>
+                    <li>Doesn't capture every call</li>
+                    <li>Low overhead</li>
+                </ul>
+            </div>
+        </div>
+        <div class="span6">
+            <h2>Instrumented - IE11</h2>
+            <div>
+                <ul>
+                    <li>Data is collected at every function enter and exit</li>
+                    <li>Captures every call</li>
+                    <li>High overhead</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="span12">
+            <p><strong>Important:</strong> Debugging impacts performance and is turned on when you open F12.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12 centerText">
+            <a class="btn btn-large btn-primary" href="/2015BuildF12Demos.html">Demo Index</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

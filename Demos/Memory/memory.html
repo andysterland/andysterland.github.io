@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>   
+		<title>Memory Tool Improvements</title>
+	    <link href="../../bootstrap.css" rel="stylesheet">
+	    <link href="../../demo.css" rel="stylesheet">
+		<script src="Memory.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		    <div class="row">
+		        <div class="span12">
+					<h1>Memory Tool Improvements</h1>
+					<p><p>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="span12 hero-unit">
+					<button id="leak" class="btn btn-large btn-success">Leak me, leak me!</button>
+					<button id="take" class="btn btn-large btn-success">Take me, take me!</button>
+					<div id="orphan">I'm going to be orphaned</div>
+					<div id="out">
+
+					</div>
+				</div>
+			</div>
+
+		    <div class="row">
+                <div class="span6">
+                    <h2>DOM Integration</h2>
+                    <ul>
+                        <li>Leaked node highlighting</li>
+                        <li>DOM highlighting, show in DOM Explorer</li>
+                        <li>Flip between roots, types and dominator views</li>
+                    </ul>
+                </div>
+                <div class="span6">
+                    <h2>Instrument Your Code</h2>
+                    <ul>
+                        <li><code>console.takeHeapsnapshot()</code> take a snapshot from code</li>
+                    </ul>
+                </div>
+            </div>
+
+		    <div class="row">
+		        <div class="span12 centerText">
+		            <a class="btn btn-large btn-primary" href="/2015BuildF12Demos.html">Demo Index</a>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
