@@ -9,7 +9,7 @@
 			
 			html += ("<tr><td>"+itemKey+"</td><td>"+itemValue+"</td></tr>");
 		}
-		$("#tableOfItemsBody").html(html);
+		$("#tableOfItems").html(html);
 	}
 	
 	$(document).ready(function(){
