@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <title>F12 - The IE Developer Tools - Debugger</title>
+    <link rel="stylesheet" href="Demo.css" />
+    <script src="jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+
+</body>
+</html>
+
+
+<!doctype html>
+<html>
+	<head>   
+		<title>Just My Code</title>
+	    <link href="../bootstrap.css" rel="stylesheet">
+	    <link href="../demo.css" rel="stylesheet">
+	    <link href="style.css" rel="stylesheet">
+		<script src="../jquery-1.11.3.min.js"></script>
+    <script src="someOtherLibrary.js"></script>
+    <script>
+        (function () {
+            $(window).ready(function(){
+                $("#out").css({
+                    "width": "300px",
+                    "height": "100px"
+                }).hide();
+
+                $("#stepThroughJMC").click( function(){
+                    $("#out")
+                    .show()
+                    .css({
+                        "color": "#FFF",
+                        "background-color": "#000"
+                    });
+
+                    var luckyNumber = magic.getNumber() / 2;
+                    var msg = "your lucky number is: " + luckyNumber; 
+
+                    $("#out").text(msg);
+                });
+
+                $("#caughtException").click( function(){
+                    try{
+                        var x = null;
+                        x.myBad();
+                    } catch (exception){
+                        console && console.error("Oops")
+                    }
+                });
+            });
+        })();
+    </script>
+	</head>
+	<body>
+		<div class="container">
+		    <div class="row">
+		        <div class="span12">
+					<h1>Debugger Improvement - View Web Storage</h1>
+					<p><p>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="span12 hero-unit">	
+                    <button id="stepThroughJMC">JMC stepping</button>
+                    <br />
+                    <br />
+                    <button id="caughtException">First chance exception</button>
+                    <br />
+                    <br />
+                    <br />
+                    <div id="out"></div>
+				</div>
+			</div>
+
+		    <div class="row">
+                <div class="span6">
+                    <h2>Stepping</h2>
+                    <ul>
+                        <li>Never step into library code again!</li>
+                    </ul>
+                </div>
+                <div class="span6">
+                    <h2>Exceptions</h2>
+                    <ul>
+                        <li>Break in first chance exceptions only in your code</li>
+                    </ul>
+                </div>
+            </div>
+
+		    <div class="row">
+		        <div class="span12 centerText">
+		            <a class="btn btn-large btn-primary" href="/Demos/index.html">Demo Index</a>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
+
