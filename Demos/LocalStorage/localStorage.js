@@ -1,14 +1,16 @@
 (function() {
 	
 	function refreshTable(){
-		var tableOfItems = $("#tableOfItems");
+		var tableOfItemsBody = $("#tableOfItemsBody");
+		var html = "";
 		var localStorageKeys = Object.keys(window.localStorage);
 		for (var i = 0; i < localStorageKeys.length; i++){
 			var itemKey = localStorageKeys[i];
 			var itemValue = window.localStorage[itemKey];
 			
-			$("#myTable > tbody:last-child").append("<tr>"+itemKey+"</tr><tr>"+itemValue+"</tr>");
+			html += ("<tr>"+itemKey+"</tr><tr>"+itemValue+"</tr>");
 		}
+		tableOfItemsBody.html(html);
 	}
 	
 	$(document).ready(function(){
