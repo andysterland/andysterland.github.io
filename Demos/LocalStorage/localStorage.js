@@ -1,7 +1,7 @@
 (function() {
 	
 	function refreshTable(){
-		var html = "";
+		var html = "<thead><tr><td>Key</td><td>Value</td></tr></thead>";
 		var localStorageKeys = Object.keys(window.localStorage);
 		for (var i = 0; i < localStorageKeys.length; i++){
 			var itemKey = localStorageKeys[i];
