@@ -16,6 +16,9 @@
 			var itemKey = $("#itemKey").val();
 			var itemValue = $("#itemValue").val();
 			window.localStorage.setItem(itemKey, itemValue);
+			refreshTable();
 		});			
 	});	
+	
+	refreshTable();
 })();
