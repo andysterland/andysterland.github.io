@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>F12 XmlHttpRequest Breakpoints</title>
+    <link href="../bootstrap.css" rel="stylesheet">
+    <link href="../demo.css" rel="stylesheet">
+	<script src="../jquery-1.11.3.min.js"></script>
+	<script src="SimpleXhr.js"></script>
+    <script>
+        (function () {
+            function isPrime(numberToTest) {
+                var testResult;
+                if (numberToTest == 1 || numberToTest == 2) {
+                    testResult = true;
+                }
+
+                for (var i = numberToTest - 1; i > 1; i--) {
+                    if (numberToTest % i == 0) {
+                        testResult = false;
+                    }
+                }
+
+                return testResult;
+            }
+
+            function getRandomWholeNumber(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+            document.addEventListener("DOMContentLoaded", function(){
+                var traceThis = document.getElementById("traceThis");
+                traceThis.addEventListener("click", function () {
+                    // Add console logging without modifying code
+                    var randNum = getRandomWholeNumber(0, 100);
+
+                    isPrime(randNum);
+                });
+            });
+        })();
+    </script>
+</head>
+
+<body>
+		<div class="container">
+		    <div class="row">
+		        <div class="span12">
+					<h1>Debugger Improvement - XmlHttpRequest Breakpoints</h1>
+					<p><p>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="span12 hero-unit">					
+            		<p>Simple example of fetching text via an XmlHttpRequest.</p>
+					<button id="fetch">Fetch Data</button>
+					<div id="out"></div>
+				</div>
+			</div>
+
+		    <div class="row">
+                <div class="span6">
+                    <h2></h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="span6">
+                    <h2></h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+
+		    <div class="row">
+		        <div class="span12 centerText">
+		            <a class="btn btn-large btn-primary" href="/Demos/index.html">Demo Index</a>
+		        </div>
+		    </div>
+		</div>
+</body>
+</html>
