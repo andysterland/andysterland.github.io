@@ -1,3 +1,9 @@
+class User {
+  constructor() {
+      
+  }  
+}
+
 var users = [
     { name: 'Jack', age: 21 },
     { name: 'Ben', age: 23 },
