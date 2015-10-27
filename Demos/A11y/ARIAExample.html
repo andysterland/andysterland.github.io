@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+    <meta charset="utf-8" />
+    <title>ARIA Example</title>
+</head>
+
+<body class="win-type-body">
+    <div role="application">
+        <div id="guess1" class="guess">
+            <h2>Guessing Game</h2>
+            <p>
+                <strong>Instructions:</strong> In this game you guess a number between 1 an 10 and then press the "Check My Guess" button to check your responses.
+                An <abbr title="Accessible Rich Internet Application">ARIA</abbr> dialog box will display the results of your guess.  To start over again to press the "Play Again" button.
+            </p>
+            <p class="input">
+                <label id="guess1_label" for="guess1_text">Guess a number between 1 and 10</label>
+                <input type="text" id="guess1_text" size="3" aria-labelledby="guess1_label" aria-invalid="false" />
+            </p>
+            <p id="guess1_alert" role="alert" class="feedback"></p>
+
+            <p class="input">
+                <input class="button" id="guess1_check" type="button" value="Check My Guess" />
+                <input class="button" id="guess1_again" type="button" value="Play Again" />
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+

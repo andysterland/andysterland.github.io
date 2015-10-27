@@ -12,6 +12,13 @@
             html += "<th>console API</th>" + "\n";
             html += "<th>detected</th>" + "\n";
             html += "<th>type</th>  " + "\n";  
+            html += "<th>read-only</th>  " + "\n";  
+            html += "<th>enumerable</th>  " + "\n"; 
+            html += "<th>configurable</th>  " + "\n"; 
+            html += "<th>writeable</th>  " + "\n"; 
+            html += "<th>value</th>  " + "\n"; 
+            html += "<th>get</th>  " + "\n"; 
+            html += "<th>set</th>  " + "\n"; 
             html += "</tr>" + "\n";  
             html += "</thead>" + "\n";
             html += "<tbody>" + "\n";			
@@ -23,10 +30,16 @@
 					var properties = Object.getOwnPropertyNames(proto);
 					
 					consolePropDescrip.forEach(function(key, index){
+						var propertyDescriptor = Object.getOwnPropertyDescriptor(window.console, key)
+						
 						html += "<tr>" + "\n";
 						html += "<td>"+key+"</td>" + "\n";
 						html += "<td>"+"yes"+"</td>" + "\n";
 						html += "<td>"+typeof window.console[key]+"</td>" + "\n";
+						html += "<td>"++"</td>" + "\n";
+						html += "<td>"++"</td>" + "\n";
+						html += "<td>"++"</td>" + "\n";
+						html += "<td>"++"</td>" + "\n";
 						html += "</tr>" + "\n";
 					});
 			
