@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console Demos</title>
+    <script src="Console.js"></script>
+    <script src="ConsoleTypeScript.js"></script>
+    <link href="../bootstrap.css" rel="stylesheet">
+    <link href="../demo.css" rel="stylesheet">
+	<style>
+
+	</style>
+    <script>
+        (function(){
+            
+            document.addEventListener("DOMContentLoaded", function(){
+                var multiLog = document.querySelector("#multiLog");
+                multiLog.addEventListener("click", function (){
+                    console.log(document, multiLog, window);
+                });
+                
+                 var subLog = document.querySelector("#subLog");
+                subLog.addEventListener("click", function (){
+                    var currentTime = new Date();
+                    console.log("The epoch time in ms is %d in words the time is: %s", currentTime, currentTime);
+                });               
+            });
+        
+        })();       
+        
+    </script>
+</head>
+<body>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <h1>Console - console.log</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12 hero-unit">                    
+                    <button id="multiLog" class="btn btn-large btn-success">Log multiple arguments</button>                   
+                    <button id="subLog" class="btn btn-large btn-success">Log argument subsitution</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12">
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6">
+                    <h2>console.log</h2>
+                    <ul>
+                        <li>Multi parameters comma seperate</li>
+                        <li>Argument sub with %s (string), %i/$%d (number)</li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div class="span6">
+                    <h2></h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="span12 centerText">
+                    <a class="btn btn-large btn-primary" href="/Demos/index.html">Demo Index</a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
