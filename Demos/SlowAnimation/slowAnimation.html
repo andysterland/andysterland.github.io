@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>   
+		<title>Slow Animations</title>
+	    <link href="../bootstrap.css" rel="stylesheet">
+	    <link href="../demo.css" rel="stylesheet">
+		<script src="../jquery-1.11.3.min.js"></script>
+		<style>
+			#jQueryAnimate{
+				margin: 10px;
+			}
+			
+			#cssAnimate{			
+				margin: 10px;
+			}
+			
+			#animationZone {
+				
+			}
+			
+			#animateBox{
+				width: 0;
+				height: 20px;
+				border-radius: 4px;
+				background-color: #0000FF;
+				margin: 2px;
+			}
+			
+			.animateBoxCss{
+				transition: width 4s;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("#jQueryAnimate").click(function(){					
+					$("#animateBox")
+						.animate({
+							width: 400							
+						}, 4000, "linear");
+				});
+				$("#cssAnimate").click(function(){
+					$("#animateBox")
+						.addClass("animateBoxCss")
+						.css("width", 400);
+				});
+				$("#reset").click(function(){
+					$("#animateBox")
+						.removeClass("animateBoxCss")
+						.css("width", 0);
+				});				
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		    <div class="row">
+		        <div class="span12">
+					<h1>Slow Animations</h1>
+					<p><p>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="span12 hero-unit">
+					<button id="jQueryAnimate" class="btn btn-large btn-success">Animate me jQuery</button>
+					<button id="cssAnimate" class="btn btn-large btn-success">Animate me CSS</button>
+					<button id="reset" class="btn btn-large">Reset</button>
+					<div id="animationZone">
+						<div id="animateBox"></div>
+					</div>
+				</div>
+			</div>
+
+		    <div class="row">
+                <div class="span6">
+                    <h2>What's Going on?</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="span6">
+                    <h2>What's UI Thrashing</h2>
+                    <ul>
+                        <li><code>addEvenListener</code> instrumented</li>
+                    </ul>
+                </div>
+            </div>
+
+		    <div class="row">
+		        <div class="span12 centerText">
+		            <a class="btn btn-large btn-primary" href="/Demos/index.html">Demo Index</a>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
