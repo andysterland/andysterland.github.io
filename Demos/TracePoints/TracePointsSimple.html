@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <title>F12 TracePoints</title>
+    <link href="../bootstrap.css" rel="stylesheet">
+    <link href="../demo.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+	<script src="../jquery-1.11.3.min.js"></script>
+    <script>
+        function getRandomWholeNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+            
+        window.setInterval(function() {
+            // Log to the console without modifying source code!
+            var radom = getRandomWholeNumber(1, new Date());
+            var randomPastDate = new Date(radom);
+            var pastYear = randomPastDate.getFullYear();
+            var pastMonth = randomPastDate.getMonth();
+            
+            
+            
+            
+            return randomPastDate;
+        }, 3000)
+    </script>
+</head>
+
+<body>
+		<div class="container">
+		    <div class="row">
+		        <div class="span12">
+					<h1>Debugger Improvement - TracePoints</h1>
+					<p><p>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="span12 hero-unit">					
+                    <button id="traceThis">Trace this</button>
+				</div>
+			</div>
+
+		    <div class="row">
+                <div class="span6">
+                    <h2>TracePoints</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="span6">
+                    <h2>Event Tracepoints</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+
+		    <div class="row">
+		        <div class="span12 centerText">
+		            <a class="btn btn-large btn-primary" href="/Demos/index.html">Demo Index</a>
+		        </div>
+		    </div>
+		</div>
+</body>
+</html>
