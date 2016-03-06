@@ -33,13 +33,29 @@
 
             <div class="row">
                 <div class="span12 hero-unit">                    
-                    <button id="goConsoleTime" class="btn btn-large btn-success">Go console.time!</button>         
+                    <button id="goConsoleTime" class="btn btn-large btn-success">Go console.time!</button>    
+                    <button id="goConsoleTimeNested" class="btn btn-large btn-success">Go nested console.time!</button>         
                 </div>
             </div>
 
             <div class="row">
                 <div class="span12">
-                    <p></p>
+                    <p>Don't use</p>
+                    <div>
+                        <pre class="code">
+var startDate = new Date();
+/* lots of code here */
+var timeTaken = newDate() - startDate;                            
+                        </pre>
+                    </div>
+                    <p>use</p>
+                    <div>
+                        <pre class="code">
+console.time("Some Scenario"); 
+/* lots of code here */
+console.timeEnd("Some Scenario"); 
+                        </pre>
+                    </div>
                 </div>
             </div>
             <div class="row">
