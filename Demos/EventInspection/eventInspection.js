@@ -21,5 +21,9 @@
             };
             xhr.send(null);
         });
+        fetch.addEventListener("click", function fetchMistress_onClick() {
+            var x = 0;
+            x++;            
+        });
     });
 })();
