@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <title>Event Inspection</title>
+    <link href="../bootstrap.css" rel="stylesheet">
+    <link href="../demo.css" rel="stylesheet">
+	<script src="../jquery-1.11.3.min.js"></script>
+	<script src="eventInspection.js"></script>
+    <script>
+    </script>
+    <style>
+    .icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }  
+    #hoverZone{
+        width: 160px;
+        height: 160px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: move;
+        background-color: #FFB200;
+    }
+    </style>
+</head>
+
+<body>
+		<div class="container">
+		    <div class="row">
+		        <div class="span12">
+					<h1>Debugger Improvement - XmlHttpRequest Breakpoints</h1>
+					<p><p>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="span12 hero-unit">					
+					<button id="fetch"  class="btn btn-large btn-success">Make XmlHttpRequest</button>
+                    <div id="hoverZone"><span>Mouse here...</span></div>
+					<div id="out"></div>
+				</div>
+			</div>
+
+		    <div class="row">
+                <div class="span6">
+                    <h2>Event Inspection</h2>
+                    <ul>
+                        <li>DOM Explorer - events panel</li>
+                    </ul>
+                </div>
+                <div class="span6">
+                    <h2>Event Debugging</h2>
+                    <ul>
+                        <li><img class="icon" src="eventBreakpoint.png"/>Event breakpoints</li>
+                        <li><img class="icon" src="eventTracepoint.png"/>Event TracePoints</li>
+                        <li><img class="icon" src="xhrBreakpoint.png"/>XmlHttpRequest breakpoints</li>
+                    </ul>
+                </div>
+            </div>
+
+		    <div class="row">
+		        <div class="span12 centerText">
+		            <a class="btn btn-large btn-primary" href="/Demos/index.html">Demo Index</a>
+		        </div>
+		    </div>
+		</div>
+</body>
+</html>
