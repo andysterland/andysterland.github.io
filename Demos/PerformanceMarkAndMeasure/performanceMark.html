@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculation Demo for Profiling</title>
-    <link href="../bootstrap.css" rel="stylesheet">
-    <link href="../demo.css" rel="stylesheet">
+    <link href="../bootstrap.css" rel="stylesheet"/>
+    <link href="../demo.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../HighlightJS/styles/default.css"/>
+    <script src="../../HighlightJS/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <style>
     </style>
     <script src="performanceMark.js"></script>
@@ -15,7 +18,8 @@
 <div class="container">
     <div class="row">
         <div class="span12">
-            <h1>Profiling - performance.mark and performance.measure</h1>
+            <h1>Profiling -</h1>
+            <h1>performance.mark and performance.measure</h1>
             <p></p>
         </div>
     </div>
@@ -33,16 +37,30 @@
     </div>
     <div class="row">
         <div class="span6">
-        <h2>performance.mark</h2>
+        <h2>mark</h2>
             <div>
+<pre class="code">
+<code class="javascript">
+performance.mark(name)
+</code>
+</pre>     
+                    <dt>name</dt><dd>The name for the mark</dd>           
                 <ul>
                     <li></li>
                 </ul>
             </div>
         </div>
         <div class="span6">
-            <h2>performance.measure</h2>
+            <h2>measure</h2>
             <div>
+<pre class="code">
+<code class="javascript">
+performance.measure(name, startMark,  endMark)
+</code>
+</pre>
+                    <dt>name</dt><dd>The name for the measure</dd>
+                    <dt>startMark</dt><dd>The name of the mark that marks the start of the scenario</dd>
+                    <dt>endMark</dt><dd>The name of the mark that marks the end of the scenario</dd>
                 <ul>
                     <li></li>
                 </ul>
