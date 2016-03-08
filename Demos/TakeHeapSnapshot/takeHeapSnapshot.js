@@ -9,6 +9,7 @@
             window.orphan = orphan
             orphan.parentElement.removeChild(orphan);
             // At this point the element is not in the markup tree but is alive
+            console.takeHeapSnapshot();
         });
 
         var take = document.getElementById("take");
