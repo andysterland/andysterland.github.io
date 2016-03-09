@@ -27,7 +27,10 @@
             // Add console logging without modifying code
             var randNum = getRandomWholeNumber(0, 100);
 
-            isPrime(randNum);
+            var result = isPrime(randNum);
+            
+            var out = document.getElementById("out");
+            out.textContent = randNum + " is" + (result)?" ":" not " + "a prime number."
         });
     });
 })();
