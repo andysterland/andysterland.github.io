@@ -25,6 +25,18 @@ button: active {
     margin-top: 5px;
 }
 
-.awesomeBtn{
+.awesomeBtn {
     font-size: 2em;
+}
+
+#demoContent {
+    width: 200px;    
+}
+
+#firstButton {
+    width: 200px;    
+}
+
+#secondButton {
+    width: 200px;    
 }
