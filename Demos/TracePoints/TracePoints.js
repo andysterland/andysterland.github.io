@@ -6,7 +6,7 @@
         }
 
         for (var i = numberToTest - 1; i > 1; i--) {
-            if (numberToTest % i == 0) {
+            if (numberToTest % i == 1) {
                 // Ooops what a mistake to make
                 testResult = true;
                 break;
