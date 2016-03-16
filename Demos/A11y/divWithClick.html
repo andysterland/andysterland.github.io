@@ -6,7 +6,13 @@
     <link href="../bootstrap.css" rel="stylesheet">
     <link href="../demo.css" rel="stylesheet">
 	<style>
-
+        .divWithClick {
+            cursor: pointer;
+        }
+        #divWithClick:hover {
+            background-color: #333333;
+            color: #eeeeee;
+        }
 
 	</style>
 </head>
@@ -15,12 +21,16 @@
             <div class="row">
                 <div class="span12">
                     <h1>Marking UI as invokable</h1>
+                    <p>In the example below the div has a click handler.</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="span12 hero-unit">                    
-                    
+                    <div id="clickMe" class="divWithClick">Click Me!</div>             
+                    <div id="clickMe2" tabindex="1" class="divWithClick">Click Me, with focus!</div>
+                    <div id="out"></div>
+                    <p></p>
                 </div>
             </div>
 
@@ -31,16 +41,19 @@
             </div>
             <div class="row">
                 <div class="span6">
-                    <h2></h2>
+                    <h2>Best Practice</h2>
                     <ul>
+                        <li>Every element that a user can interact with should have an appriopate aria role</li>
+                        <li>For something like this that action is <code>role = "button"</code> (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role" target="_blan">more info</a>)</li>
                         <li></li>
                     </ul>
                 </div>
 
                 <div class="span6">
-                    <h2></h2>
+                    <h2>Spotting the issue in the tool</h2>
                     <ul>
-                        <li></li>
+                        <li>The element doesn't appear in the accessbility tree</li>
+                        <li>Elements might still be in the tree because they have a tabindex, but still won't be reconized as a control</li>
                     </ul>
                 </div>
             </div>
