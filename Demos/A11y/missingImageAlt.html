@@ -2,11 +2,13 @@
 <html>
 <head>
     <title>Accessibility Demos - </title>
-    <script src="divWithClick.js"></script>
+    <script src="missingImageAlt.js"></script>
     <link href="../bootstrap.css" rel="stylesheet">
     <link href="../demo.css" rel="stylesheet">
 	<style>
-
+        .shrinkImg{
+            width: 160px;
+        }
 
 	</style>
 </head>
@@ -14,15 +16,21 @@
         <div class="container">
             <div class="row">
                 <div class="span12">
-                    <h1>Img missing an al attribute</h1>
+                    <h1>Img missing an alt attribute</h1>
                     <p>In the example below the img is missing an alt attribute.</p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="span12 hero-unit">                    
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jacques-Louis_David_017.jpg/320px-Jacques-Louis_David_017.jpg"/>
+                <div class="span6"> 
+                    <h2>Image with<strong>out</strong> alt attribute</h2>                      
+                    <img class="shrinkImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jacques-Louis_David_017.jpg/320px-Jacques-Louis_David_017.jpg"/>
                     <!-- Painting of Napoleon Bonaparte in His Study at the Tuileries -->
+                </div>
+                <div class="span6">
+                    <h2>Image with alt attribute</h2>                    
+                    <img class="shrinkImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jacques-Louis_David_017.jpg/320px-Jacques-Louis_David_017.jpg" alt="Painting of Napoleon Bonaparte in His Study at the Tuileries"/>
+                    <!--  -->
                 </div>
             </div>
 
