@@ -13,6 +13,10 @@
                 testResult = false;
             }
         }
+        
+        /*
+         ("%i is " + ((testResult)? "": "not ") + "prime number"), numberToTest
+        */
 
         return testResult;
     }
@@ -37,7 +41,11 @@
         var hoverZone = document.getElementById("hoverZone");
         hoverZone.addEventListener("mousemove", function hoverZone_onClick() {
             /* do smething */
-            // "(%i, %i)", arguments[0].x, arguments[0].y 
+            /*
+            
+             "(%i, %i)", arguments[0].x, arguments[0].y 
+             
+             */
         });
     });
 })();
