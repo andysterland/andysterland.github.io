@@ -32,5 +32,11 @@
             var out = document.getElementById("out");
             out.textContent = randNum + " is" + (result)?" ":" not " + "a prime number."
         });
+        
+        var hoverZone = document.getElementById("hoverZone");
+        hoverZone.addEventListener("mousemove", function hoverZone_onClick() {
+            /* do smething */
+            // "(%i, %i)", arguments[0].x, arguments[0].y 
+        });
     });
 })();

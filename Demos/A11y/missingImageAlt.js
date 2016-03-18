@@ -2,6 +2,7 @@
     
     window.addEventListener("DOMContentLoaded", function(){
         
-    });    
+    });
+    
     
 })();
