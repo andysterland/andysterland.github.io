@@ -30,7 +30,7 @@
             var result = isPrime(randNum);
             
             var traceOutput = document.getElementById("traceOutput");
-            var text = "" + randNum + " is" + ((result)?" ":" not " + "a prime number.");
+            var text = "" + randNum + " is" + ((result)?" ":" not ") + "a prime number.";
 			traceOutput.textContent = text;
         });
         
