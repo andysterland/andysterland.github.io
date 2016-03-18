@@ -25,12 +25,13 @@
         var traceThis = document.getElementById("traceThis");
         traceThis.addEventListener("click", function () {
             // Add console logging without modifying code
-            var randNum = getRandomWholeNumber(0, 100);
+            var randNum = getRandomWholeNumber(0, 10);
 
             var result = isPrime(randNum);
             
-            var out = document.getElementById("out");
-            out.textContent = randNum + " is" + (result)?" ":" not " + "a prime number."
+            var traceOutput = document.getElementById("traceOutput");
+            var text = "" + randNum + " is" + ((result)?" ":" not " + "a prime number.");
+			traceOutput.textContent = text;
         });
         
         var hoverZone = document.getElementById("hoverZone");
