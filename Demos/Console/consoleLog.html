@@ -11,6 +11,18 @@
 	</style>
     <script>
         (function(){
+	
+            function evalCode(){
+                var string2Eval = "";
+                string2Eval += "function log(data){\n";
+                string2Eval += "   console.log(data);\n";
+                string2Eval += "}\n";
+                string2Eval += "log(window);\n";
+                string2Eval += "\n";
+                string2Eval += "//# sourceURL=example.js\n";
+                
+                eval(string2Eval)
+            }
             
             document.addEventListener("DOMContentLoaded", function(){
                 var multiLog = document.querySelector("#multiLog");
@@ -22,6 +34,11 @@
                 subLog.addEventListener("click", function (){
                     var currentTime = new Date();
                     console.log("The epoch time in ms is %d in words the time is: %s", currentTime, currentTime);
+                });
+                
+                var multiLog = document.querySelector("#logFromSourceUrl");
+                multiLog.addEventListener("click", function (){
+                    evalCode();
                 });               
             });
         
@@ -41,6 +58,7 @@
                 <div class="span12 hero-unit">                    
                     <button id="multiLog" class="btn btn-large btn-success">Log multiple arguments</button>                   
                     <button id="subLog" class="btn btn-large btn-success">Log argument subsitution</button>
+                    <button id="logFromSourceUrl" class="btn btn-large btn-success">//# sourceURL example</button>
                 </div>
             </div>
 
