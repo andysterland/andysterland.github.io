@@ -1,0 +1,41 @@
+.testInput
+{
+	width: 40px;
+}
+
+.testDiv
+{
+	width: 40px;
+	background-color: white;
+}
+
+
+.testInputActive:active
+{
+	background-color: red;
+}
+
+.testButtonActive:active
+{
+	background-color: red;
+}
+
+.testDivActive:active
+{
+	background-color: red;	
+}
+
+.testInputFocus:focus
+{
+	background-color: green;
+}
+
+.testButtonFocus:focus
+{
+	background-color: green;
+}
+
+.testDivFocus:focus
+{
+	background-color: green;	
+}
