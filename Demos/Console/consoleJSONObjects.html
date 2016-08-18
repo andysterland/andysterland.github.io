@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console Demos</title>
+    <script src="consoleJSONObjects.js"></script>
+    <link href="../bootstrap.css" rel="stylesheet">
+    <link href="../demo.css" rel="stylesheet">
+	<script>
+        (
+            function(){
+                var logValid = document.getElementById("logValid");
+                logValid.addEventListener("click", function(){
+                    var x = {
+                        a: "test",
+                        b: 3,
+                        c: [1, 2, 3],
+                        d: false,
+                        e: {
+                            a: "hello"
+                        },
+                        f: null
+                    };
+                    console.log(x);
+                });
+                var logInvalid = document.getElementById("logInvalid");
+                logInvalid.addEventListener("click", function(){
+                    var y = {
+                        a: {
+                            parent: a
+                        }
+                        b: new Date()
+                    };
+                    console.log(y);
+                });
+                var logElement = document.getElementById("logElement");
+                logElement.addEventListener("click", function(){
+                    console.log(document.body);
+                });
+            }
+        )();
+    </script>
+</head>
+<body>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <h1>Console Copy Item</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12 hero-unit">                    
+                    <button id="logValid" class="btn btn-large btn-success">Log valid JSON Object</button>           
+                    <button id="logInvalid" class="btn btn-large btn-success">Log invalid JSON Object</button>        
+                    <button id="logElement" class="btn btn-large btn-success">Log element</button>        
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12">                    
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6">
+                    <h2></h2>
+                    <ul>
+                    </ul>
+                </div>
+
+                <div class="span6">
+                    <h2></h2>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="span12 centerText">
+                    <a class="btn btn-large btn-primary" href="/Demos/index.html">Demo Index</a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
