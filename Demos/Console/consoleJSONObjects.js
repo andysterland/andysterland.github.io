@@ -13,6 +13,7 @@
                 f: null
             };
             console.log(x);
+            console.log("JSON String:\n", JSON.stringify(x));
         });
         var logInvalid = document.getElementById("logInvalid");
         logInvalid.addEventListener("click", function () {
@@ -23,10 +24,12 @@
                 b: new Date()
             };
             console.log(y);
+            console.log("JSON String:\n", JSON.stringify(y));
         });
         var logElement = document.getElementById("logElement");
         logElement.addEventListener("click", function () {
             console.log(document.body);
+            console.log("JSON String:\n", JSON.stringify(document.body));
         });
     });
 }
