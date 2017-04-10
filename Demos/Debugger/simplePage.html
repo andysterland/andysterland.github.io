@@ -7,8 +7,13 @@
         document.addEventListener("DOMContentLoaded", function(){
             document.getElementById("go").addEventListener("click", function(){
                     console.log("hi!");
+                    var c = add(1, 3);
+                    c = add(c, c);
             });
         });
+        function realAdd(a, b){
+            return a+b;
+        }
     </script>
     <script src="sourceUrl.js"></script>
 </head>
