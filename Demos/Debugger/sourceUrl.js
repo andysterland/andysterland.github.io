@@ -3,4 +3,4 @@ function add(a, b){
     return realAdd(a, b);
 }
 
-//# sourceURL=My awesome library
+//# sourceURL=MyAwesomelibrary
