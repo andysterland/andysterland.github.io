@@ -3,4 +3,6 @@ function add(a, b){
     return realAdd(a, b);
 }
 
+function fii() {
+
 //# sourceURL=MyAwesomelibrary
