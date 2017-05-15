@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FPS Counter</title>
+    <script src="../jquery-1.11.3.min.js"></script>
+    <script src="fps.js"></script>
+    <link href="../bootstrap.css" rel="stylesheet">
+    <link href="../demo.css" rel="stylesheet">
+	<style>
+		
+	</style>
+    <script>
+        $("ready", function(){
+            var fps = new FPS();
+            fps.start(document.getElementById('fpsMeterContainer'));
+
+            $("#busy").click(function(){
+                console.time("busy");
+                var maxI = 1000000;
+                var spinning = "";
+                for(var i = 0; i < maxI; i++){
+                    spinning += Math.random().toString(36).substring(7);
+                    if(i % 16 == 0) {
+                        spinning = "";
+                    }
+                }
+                console.timeEnd("busy");
+            });
+        });
+    </script>
+    <script src="fps.js"></script>
+</head>
+<body>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <h1>FPS Counter</h1>
+                    <div>FPS: <span id="fpsMeterContainer"></span></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12 hero-unit">          
+                    <button id="busy" class="btn btn-large btn-success">Make Busy</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span12">
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6">
+                </div>
+
+                <div class="span6">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="span12 centerText">
+                    <a class="btn btn-large btn-primary" href="/Demos/index.html">Demo Index</a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
