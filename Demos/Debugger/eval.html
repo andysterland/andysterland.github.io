@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Simple Eval Script</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementById("go").addEventListener("click", function(){
+                     let stringToEval = "function foo(){ \nconsole.log('hi from eval'); \n};\nfoo();"
+                     stringToEval += "//# sourceURL=SomeEvalCode.js\n";
+                     eval(stringToEval);
+            });
+        }); 
+    </script> 
+</head>
+
+<body>
+    <button id="go">Add me some eval!</button>
+</body>
