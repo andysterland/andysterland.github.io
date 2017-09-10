@@ -1,7 +1,6 @@
-function log(a, b){
-    console.log("Hello from soureURL");
-    return realAdd(a, b);
+function log(){
+    codeToEval = 'console.log("Hello from soureURL");\n\n';
+    codeToEval ='//# sourceURL=MyAwesomelibrary.js';
+    eval(codeToEval);
 }
 log();
-
-//# sourceURL=MyAwesomelibrary
