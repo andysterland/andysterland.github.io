@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+    	<title>F12 @ //build</title>
+        <link href="../bootstrap.css" rel="stylesheet">
+        <link href="../demo.css" rel="stylesheet">
+        <script>
+        
+            document.addEventListener("DOMContentLoaded", function(){
+                var btnNewWorker = document.getElementById("btnNewWorker");
+
+                btnNewWorker.addEventListener("click", function(){
+                    var workerCount = 0;
+                    var w = new Worker("worker.js");
+                    workerCount++;
+
+                    w.addEventListener("message", function(event){
+                        var preMessageLog = document.getElementById("preMessageLog");
+                        preMessageLog.textContent += "Worker #" + workerCount + ": " + event.data + "\n";
+                    });
+                });
+            });
+        
+        </script>
+    </head>
+
+    <body>
+    <div class="container">
+            <div class="row">
+                <div class="span12">                    
+                    <h1>Web Workers</h1>
+                </div>
+            </div>
+        <div class="row">
+            <div class="span12 hero-unit">
+                <p></p>
+                <p>Spawn a new web worker: <button id="btnNewWorker">New Worker</button></p>
+                <pre id="preMessageLog"></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span6">
+                <h2></h2>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="span6">
+                <h2></h2>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span12 centerText">
+                <a class="btn btn-large btn-primary" href="/Demos/index.html">Demo Index</a>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
